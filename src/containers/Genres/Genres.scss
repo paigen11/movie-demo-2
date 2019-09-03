@@ -1,7 +1,21 @@
-.genre-list {
-  margin: 30px auto;
-  width: 1000px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.genres-page {
+  h1 {
+    margin: 0;
+  }
+  .genre-list {
+    margin: 0 auto;
+    margin-bottom: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .genre-component{
+      width: 110px;
+      height: 110px;
+      font-size: 14px;
+
+      &:nth-child(even){
+        margin-right: 0;
+      }
+    }
+  }
 }

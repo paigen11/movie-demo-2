@@ -51,7 +51,7 @@ export default class Genres extends Component {
     }
 
     return (
-      <>
+      <div className="genres-page">
         {this.state.selectedGenre === 0 ? (
           <>
             <h1>Choose a Genre</h1>
@@ -63,7 +63,7 @@ export default class Genres extends Component {
             genreName={this.state.selectedGenreName}
           />
         )}
-      </>
+      </div>
     );
   }
 }
