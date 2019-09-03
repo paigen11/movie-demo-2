@@ -3,6 +3,10 @@
   font-family: sans-serif;
 }
 
+.content {
+  margin-top: -25px;
+}
+
 .hidden {
   display: none !important;
 }

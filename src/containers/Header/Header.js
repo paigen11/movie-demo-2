@@ -11,7 +11,7 @@ const Header = () => {
   }
 
   return (
-      <nav className="navbar-wrapper">
+      <nav className="navbar-wrapper content">
         <ul className="navbar-links">
           <div>
             <li className="navbar-link" onClick={() => setExpandedLinks(false)}>

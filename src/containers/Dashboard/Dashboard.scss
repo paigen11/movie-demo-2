@@ -1,26 +1,67 @@
 .dashboard {
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   overflow: scroll;
 
   .dashboard-card-wrapper {
+    margin: 20px;
     border-radius: 25px;
-    border: solid 25px #e1b65b;
-    width: 75%;
-    height: 200px;
+    border: solid 10px #e1b65b;
+    width: 250px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .fa {
-      font-size: 8em;
+      margin: 20px;
+      font-size: 96px;
+    }
+
+    h1 {
+      margin: 20px;
     }
 
     a {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: inherit;
       text-decoration: none;
       color: #8944a9;
+    }
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .dashboard {
+    .dashboard-card-wrapper {
+      width: 25vw;
+      height: 25vw;
+
+      .fa {
+        font-size:  11vw;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1500px) {
+  .dashboard {
+    max-width: 1500px;
+    .dashboard-card-wrapper {
+      width: 374px;
+      height: 374px;
+
+      .fa {
+        font-size:  165px;
+      }
     }
   }
 }

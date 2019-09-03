@@ -5,29 +5,29 @@ import './Dashboard.scss';
 export class Dashboard extends Component {
   render() {
     return (
-      <div className="dashboard" data-testid="main__dashboard">
+      <div className="dashboard content" data-testid="main__dashboard">
         <div className="dashboard-card-wrapper">
           <NavLink to="/nowplaying">
-            <div>
+            {/* <div> */}
               <i className="fa fa-ticket" aria-hidden="true" />
               <h1>Now Playing</h1>
-            </div>
+            {/* </div> */}
           </NavLink>
         </div>
         <div className="dashboard-card-wrapper">
           <NavLink to="/upcoming">
-            <div>
+            {/* <div> */}
               <i className="fa fa-video-camera" aria-hidden="true" />
               <h1>Upcoming Releases</h1>
-            </div>
+            {/* </div> */}
           </NavLink>
         </div>
         <div className="dashboard-card-wrapper">
           <NavLink to="/genres">
-            <div>
+            {/* <div> */}
               <i className="fa fa-film" aria-hidden="true" />
               <h1>Genres</h1>
-            </div>
+            {/* </div> */}
           </NavLink>
         </div>
       </div>
