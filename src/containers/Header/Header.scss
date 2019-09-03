@@ -1,3 +1,4 @@
+
 .navbar-wrapper {
     background: #b65be1;
     margin-top: -25px;
@@ -5,12 +6,23 @@
   }
   
   .navbar-links {
-    display: flex;
-    align-items: center;
+    padding: 0;
+    list-style: none;
+    div:first-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
   
   .navbar-link {
-    list-style: none;
     margin: 15px;
     width: auto;
   }
@@ -27,3 +39,32 @@
   a.active {
     color: #5be1b6;
   }
+
+  .bars {
+    font-size: 45px;
+    color: white
+  }
+
+@media only screen and (min-width: 745px) {
+  .bars {
+    display: none;
+  }
+
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div:nth-child(2) {
+      display: flex !important;
+      flex-direction: row;
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .navbar-links {
+    max-width: 1500px;
+    margin: 24px auto;
+  }
+}

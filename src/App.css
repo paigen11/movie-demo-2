@@ -2,3 +2,7 @@
   text-align: center;
   font-family: sans-serif;
 }
+
+.hidden {
+  display: none !important;
+}
