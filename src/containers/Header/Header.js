@@ -14,7 +14,7 @@ const Header = () => {
       <nav className="navbar-wrapper">
         <ul className="navbar-links">
           <div>
-            <li className="navbar-link logo" onClick={() => setExpandedLinks(false)}>
+            <li className="navbar-link" onClick={() => setExpandedLinks(false)}>
             <NavLink to="/" >
               <img src={TmdbIcon} alt="logo" />
             </NavLink>
