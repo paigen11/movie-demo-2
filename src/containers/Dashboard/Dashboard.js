@@ -8,26 +8,20 @@ export class Dashboard extends Component {
       <div className="dashboard content" data-testid="main__dashboard">
         <div className="dashboard-card-wrapper">
           <NavLink to="/nowplaying">
-            {/* <div> */}
-              <i className="fa fa-ticket" aria-hidden="true" />
-              <h1>Now Playing</h1>
-            {/* </div> */}
+            <i className="fa fa-ticket" aria-hidden="true" />
+            <h1>Now Playing</h1>
           </NavLink>
         </div>
         <div className="dashboard-card-wrapper">
           <NavLink to="/upcoming">
-            {/* <div> */}
-              <i className="fa fa-video-camera" aria-hidden="true" />
-              <h1>Upcoming Releases</h1>
-            {/* </div> */}
+            <i className="fa fa-video-camera" aria-hidden="true" />
+            <h1>Upcoming Releases</h1>
           </NavLink>
         </div>
         <div className="dashboard-card-wrapper">
           <NavLink to="/genres">
-            {/* <div> */}
-              <i className="fa fa-film" aria-hidden="true" />
-              <h1>Genres</h1>
-            {/* </div> */}
+            <i className="fa fa-film" aria-hidden="true" />
+            <h1>Genres</h1>
           </NavLink>
         </div>
       </div>

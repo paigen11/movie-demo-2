@@ -1,20 +1,16 @@
+// standard view
 .dashboard {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow: scroll;
+  height: 75vh;
 
   .dashboard-card-wrapper {
     margin: 20px;
     border-radius: 25px;
-    border: solid 10px #e1b65b;
-    width: 250px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: solid 15px #e1b65b;
 
     .fa {
       margin: 20px;
@@ -28,9 +24,7 @@
     a {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
+      justify-content: center;
       height: inherit;
       text-decoration: none;
       color: #8944a9;
@@ -38,29 +32,33 @@
   }
 }
 
-@media only screen and (min-width: 930px) {
+// mobile / tablet view
+@media only screen and (max-width: 1366px) {
   .dashboard {
     .dashboard-card-wrapper {
-      width: 25vw;
-      height: 25vw;
+      width: 300px;
+      height: 300px;
 
       .fa {
-        font-size:  11vw;
+        font-size: 132.5px;
+        margin: 10px;
       }
     }
   }
 }
 
-
-@media only screen and (min-width: 1500px) {
+// desktop view
+@media only screen and (min-width: 1367px) {
   .dashboard {
     max-width: 1500px;
+
     .dashboard-card-wrapper {
-      width: 374px;
-      height: 374px;
+      width: 350px;
+      height: 350px;
+      border: solid 25px #e1b65b;
 
       .fa {
-        font-size:  165px;
+        font-size: 165px;
       }
     }
   }
