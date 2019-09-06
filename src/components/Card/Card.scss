@@ -1,7 +1,7 @@
 .card-component {
   margin-bottom: 20px;
   margin-right: 20px;
-  width: 750px;
+  width: 700px;
   border: 1px solid #ffffff;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   border-radius: 2px;
@@ -15,5 +15,18 @@
   &:active {
     background: #fbfbfb;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media only screen and (min-width: 374px) and (max-width: 766px) {
+  .card-component {
+    margin: 10px 0;
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1500px) {
+  .card-component {
+    margin: 10px 0;
   }
 }
