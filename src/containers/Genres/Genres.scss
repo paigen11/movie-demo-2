@@ -8,13 +8,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    .genre-component{
+    .genre-component {
       width: 110px;
       height: 110px;
       font-size: 14px;
 
-      &:nth-child(even){
+      &:nth-child(even) {
         margin-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .genres-page {
+    .genre-list {
+      margin: 30px auto;
+      max-width: 1500px;
+      width: auto;
+
+      .genre-component {
+        width: 220px;
+        height: 220px;
+        font-size: 24px;
+
+        &:nth-child(even) {
+          margin-right: 20px;
+        }
       }
     }
   }
