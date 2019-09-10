@@ -1,41 +1,28 @@
 .genres-page {
-  h1 {
-    margin: 0;
-  }
   .genre-list {
-    margin: 0 auto;
-    margin-bottom: 110px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .genre-component {
-      width: 110px;
-      height: 110px;
-      font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    grid-gap: 15px;
+    justify-items: center;
+    margin: auto;
+  }
+}
 
-      &:nth-child(even) {
-        margin-right: 0;
-      }
+// tablet view
+@media only screen and (min-width: 600px) and (max-width: 969px) {
+  .genres-page {
+    .genre-list {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
 
-@media only screen and (min-width: 767px) {
+// mobile view
+@media only screen and (min-width: 375px) and (max-width: 599px) {
   .genres-page {
     .genre-list {
-      margin: 30px auto;
-      max-width: 1500px;
-      width: auto;
-
-      .genre-component {
-        width: 220px;
-        height: 220px;
-        font-size: 24px;
-
-        &:nth-child(even) {
-          margin-right: 20px;
-        }
-      }
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

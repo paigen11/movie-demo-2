@@ -18,10 +18,11 @@
   }
 }
 
-@media only screen and (min-width: 374px) and (max-width: 766px) {
+@media only screen and (max-width: 766px) {
   .card-component {
     margin: 10px 0;
-    width: 350px;
+    min-width: 350px;
+    width: calc(100% - 60px);
   }
 }
 
