@@ -15,6 +15,7 @@
   .movie-poster {
     border-radius: 3%;
     border: solid #847f86 3px;
+    height: 100%;
   }
 
   .movie-title {
@@ -24,11 +25,11 @@
   .movie-overview {
     padding: 0 20px;
     font-family: monospace;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .movie-released {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 

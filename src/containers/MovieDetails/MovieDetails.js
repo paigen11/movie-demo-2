@@ -34,7 +34,7 @@ export default class MovieDetails extends Component {
           <Review key={review.id} author={review.author} review={review} />
         );
       });
-    } else if (movieReviews && movieReviews.length < 2) {
+    } else if (movieReviews && movieReviews.length <= 2) {
       reviews = movieReviews.map(review => {
         return (
           <Review key={review.id} author={review.author} review={review} />

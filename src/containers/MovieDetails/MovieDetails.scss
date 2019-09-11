@@ -59,7 +59,81 @@
       font-family: monospace;
       display: flex;
       flex-direction: column;
-      font-size: 16px;
+      font-size: 20px;
     }
+  }
+}
+
+@media only screen and (max-width: 549px) {
+  .movie-details-wrapper {
+    h1 {
+      width: 80%;
+    }
+
+    .movie-details-poster-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .movie-details-poster {
+        width: 300px;
+        margin: 20px 0;
+        overflow-y: scroll;
+      }
+
+      .movie-details-info {
+        width: calc(100% - 80px);
+        min-width: 300px;
+        min-height: 300px;
+        font-size: 22px;
+        margin: 20px 0;
+      }
+
+      .movie-details-reviews {
+        width: calc(100% - 80px);
+        min-width: 300px;
+        font-size: 22px;
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+// tablet view
+@media only screen and (min-width: 550px) and (max-width: 1089px) {
+  .movie-details-wrapper {
+    .movie-details-poster-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .movie-details-poster {
+        margin: 20px 0;
+      }
+
+      .movie-details-info {
+        width: calc(100% - 250px);
+        min-width: 500px;
+        margin: 20px 0;
+        min-height: 300px;
+        overflow-y: scroll;
+      }
+
+      .movie-details-reviews {
+        font-size: 20px;
+        width: calc(100% - 250px);
+        min-width: 500px;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// desktop view
+@media only screen and (min-width: 1090px) {
+  .movie-details-wrapper {
+    max-width: 1500px;
   }
 }

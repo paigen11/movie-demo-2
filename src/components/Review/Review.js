@@ -2,9 +2,12 @@ import React from 'react';
 import './Review.scss';
 
 const Review = ({ review }) => (
-  <p className="review-component">
+  <div className="review-component">
+    <p>
+      <strong>By:{review.author} </strong>
       {review.content}
-  </p>
+    </p>
+  </div>
 );
 
 export default Review;
