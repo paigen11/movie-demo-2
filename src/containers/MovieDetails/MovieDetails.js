@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withLastLocation } from 'react-router-last-location';
 import { getMovieDetailsById, getMovieReviews } from '../../services/movieAPI';
 import {
   BASE_BACKDROP_PATH,
@@ -7,7 +8,7 @@ import {
 import Review from '../../components/Review/Review';
 import './MovieDetails.scss';
 
-export default class MovieDetails extends Component {
+class MovieDetails extends Component {
   state = {
     movieInfo: null,
     movieReviews: null,
@@ -26,6 +27,14 @@ export default class MovieDetails extends Component {
     const { movieInfo, loading, movieReviews } = this.state;
     let reviews;
     let otherReviews;
+    let pathname;
+
+    if (this.props.lastLocation === null) {
+      pathname = '/';
+    } else {
+      pathname = this.props.lastLocation.pathname;
+    }
+
     if (movieReviews && movieReviews.length > 2) {
       const prevReviews = movieReviews.slice(0, 2);
       otherReviews = movieReviews.length - 2;
@@ -56,7 +65,14 @@ export default class MovieDetails extends Component {
     if (!loading && movieInfo) {
       movieDetails = (
         <div className="movie-details-wrapper">
-          <h1>{movieInfo.title}</h1>
+          <div className="movie-details-title">
+            <i
+              className="fa fa-chevron-left"
+              onClick={() => this.props.history.push(`${pathname}`)}
+              aria-hidden="true"
+            />
+            <h1>{movieInfo.title}</h1>
+          </div>
           <img
             className="movie-details-backdrop"
             src={`${BASE_BACKDROP_PATH}${movieInfo.backdrop_path}`}
@@ -95,7 +111,8 @@ export default class MovieDetails extends Component {
         </div>
       );
     }
-
     return <>{movieDetails}</>;
   }
 }
+
+export default withLastLocation(MovieDetails);
