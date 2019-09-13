@@ -6,7 +6,7 @@ import {
 } from '../constants/Constants';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-console.log(process.env);
+console.log('new api key');
 
 export let genres = [];
 
