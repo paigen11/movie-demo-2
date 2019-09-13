@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withLastLocation } from 'react-router-last-location';
 import MovieList from '../../components/Movie/MovieList';
 import * as movieAPI from '../../services/movieAPI';
+import './Genres.scss';
 
 class GenreList extends Component {
   state = {
@@ -33,12 +34,13 @@ class GenreList extends Component {
 
     return (
       <>
-        <i
-          className="fa fa-chevron-left"
+        <div
+          className="genre-search-title"
           onClick={() => this.props.history.push(`${pathname}`)}
-          aria-hidden="true"
-        />
-        <p>Back to Genres</p>
+        >
+          <i className="fa fa-chevron-left" aria-hidden="true" />
+          <p>Back to Genres</p>
+        </div>
         <h1>{this.props.match.params.genreName} Movies</h1>
         <MovieList
           loading={this.state.loading}

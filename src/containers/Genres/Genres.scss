@@ -26,3 +26,26 @@
     }
   }
 }
+
+.genre-search-title {
+  display: flex;
+  align-items: center;
+  max-width: 1500px;
+  margin: auto;
+  .fa {
+    font-size: 40px;
+    margin: 0 10px 0 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+// tablet/mobile view
+@media only screen and (min-width: 375px) and (max-width: 969px) {
+  .genre-search-title {
+    p {
+      font-size: 20px;
+    }
+  }
+}
