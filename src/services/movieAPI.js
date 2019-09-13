@@ -1,12 +1,10 @@
 import axios from 'axios';
 import {
+  API_KEY,
   BASE_MOVIE_PATH,
   SEARCH_MOVIE_PATH,
   BASE_URL_PATH,
 } from '../constants/Constants';
-
-const API_KEY = process.env.REACT_APP_API_KEY;
-console.log('new api key');
 
 export let genres = [];
 
