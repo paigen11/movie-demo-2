@@ -49,9 +49,10 @@ a.active {
 @media only screen and (max-width: 766px) {
   .navbar-links {
     .navbar-link {
-      border-bottom: 1px solid white;
+      border-top: 1px solid white;
       width: 100%;
       padding: 15px;
+      margin: 0;
     }
 
     .bars {
