@@ -17,7 +17,7 @@ class GenreList extends Component {
         const movies = await movieAPI.getMoviesByGenre(
           this.props.match.params.genreId,
         );
-        this.setState({ movies, loading: false });
+        this.setState({ movies, loading: false, error: false });
       } catch (err) {
         this.setState({ loading: false, error: true });
       }
@@ -25,6 +25,32 @@ class GenreList extends Component {
   }
 
   render() {
+    const { movies, loading, error } = this.state;
+
+    let movieGenreInfo;
+
+    if (error) {
+      movieGenreInfo = (
+        <h3>
+          Woops, something went wrong trying to fetch movies of this genre.
+        </h3>
+      );
+    }
+
+    if (loading) {
+      movieGenreInfo = <h3>Loading movies of this genre now...</h3>;
+    }
+
+    if (movies.length > 0 && !loading) {
+      movieGenreInfo = (
+        <MovieList
+          loading={this.state.loading}
+          error={this.state.error}
+          movies={this.state.movies}
+        />
+      );
+    }
+
     return (
       <>
         <div
@@ -34,12 +60,15 @@ class GenreList extends Component {
           <i className="fa fa-chevron-left" aria-hidden="true" />
           <p>Back to Genres</p>
         </div>
-        <h1>{this.props.match.params.genreName} Movies</h1>
-        <MovieList
-          loading={this.state.loading}
-          error={this.state.error}
-          movies={this.state.movies}
-        />
+        <div className="genre-search-mobile-title">
+          <i
+            className="fa fa-chevron-left mobile"
+            aria-hidden="true"
+            onClick={() => this.props.history.push('/genres')}
+          />
+          <h1>{this.props.match.params.genreName} Movies</h1>
+        </div>
+        {movieGenreInfo}
       </>
     );
   }

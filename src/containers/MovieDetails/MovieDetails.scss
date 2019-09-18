@@ -1,3 +1,18 @@
+.movie-details-error {
+  display: flex;
+  align-items: center;
+  cursor: default;
+
+  .fa {
+    font-size: 40px;
+    padding: 0 10px 0 20px;
+    cursor: pointer;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+}
 .movie-details-wrapper {
   color: white;
   margin: auto;
@@ -37,6 +52,7 @@
     z-index: -1;
   }
 
+  // desktop view
   .movie-details-poster-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;

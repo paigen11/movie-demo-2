@@ -6,19 +6,26 @@
     grid-gap: 15px;
     justify-items: center;
     margin: auto;
+    h3 {
+      margin: 200px auto;
+    }
   }
 }
 
-// tablet view
+// tablet view genre list
 @media only screen and (min-width: 600px) and (max-width: 969px) {
   .genres-page {
     .genre-list {
       grid-template-columns: repeat(3, 1fr);
     }
+    h3 {
+      font-size: 22px;
+      width: 80%;
+    }
   }
 }
 
-// mobile view
+// mobile view genre list
 @media only screen and (min-width: 375px) and (max-width: 599px) {
   .genres-page {
     .genre-list {
@@ -27,6 +34,7 @@
   }
 }
 
+// desktop view
 .genre-search-title {
   display: flex;
   align-items: center;
@@ -38,15 +46,43 @@
     margin: 0 10px 0 20px;
   }
   p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
-// tablet/mobile view
+.genre-search-mobile-title {
+  .fa {
+    display: none;
+  }
+  h1 {
+    margin: auto;
+  }
+}
+
+h3 {
+  margin: 200px auto;
+}
+
+// tablet/mobile view genre results
 @media only screen and (min-width: 375px) and (max-width: 969px) {
   .genre-search-title {
-    p {
-      font-size: 20px;
+    display: none;
+  }
+
+  .genre-search-mobile-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    .fa {
+      display: block;
+      font-size: 40px;
+      margin: 0 10px 0 20px;
     }
+  }
+
+  h3 {
+    font-size: 22px;
+    width: 80%;
   }
 }

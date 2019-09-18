@@ -38,6 +38,7 @@ export default class Genres extends Component {
   render() {
     const { error, loading, genres } = this.state;
     let genreInfo = null;
+    let info = null;
 
     if (!loading && !error && genres.length) {
       genreInfo = genres.map(genre => {
@@ -53,16 +54,17 @@ export default class Genres extends Component {
     }
 
     if (error) {
-      genreInfo = <h3>Woops, something went wrong trying to fetch genres.</h3>;
+      info = 'Woops, something went wrong trying to fetch genres.';
     }
 
     if (loading) {
-      genreInfo = <h3>Loading genre data now...</h3>;
+      info = 'Loading genre data now...';
     }
 
     return (
       <div className="genres-page">
         <h1>Choose a Genre</h1>
+        {(error || loading) && <h3>{info}</h3>}
         <div className="genre-list">
           {this.renderRedirect()}
           {genreInfo}

@@ -13,7 +13,7 @@ class MovieDetails extends Component {
     movieInfo: null,
     movieReviews: null,
     loading: true,
-    error: true,
+    error: false,
   };
 
   async componentDidMount() {
@@ -65,7 +65,17 @@ class MovieDetails extends Component {
 
     if (error) {
       movieDetails = (
-        <h3>Woops, something went wrong trying to fetch movie details.</h3>
+        <>
+          <div className="movie-details-error">
+            <i
+              className="fa fa-chevron-left"
+              onClick={() => this.props.history.push(`${pathname}`)}
+              aria-hidden="true"
+            />
+            <h4>Go back</h4>
+          </div>
+          <h3>Woops, something went wrong trying to fetch movie details.</h3>
+        </>
       );
     }
 
@@ -127,6 +137,7 @@ class MovieDetails extends Component {
         </div>
       );
     }
+
     return <>{movieDetails}</>;
   }
 }
