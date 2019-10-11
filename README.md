@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Details
+
+This is the second demo created for the conference talk: "Responsive Web Design with ReactJS." It demonstrates how to create a responsive ReactJS movie database website using pure CSS3 media queries.
+
+## Technologies of Note Powering This App
+
+* ReactJS v16.9 (courtesy of the Create React App)
+* CSS media queries
+* [Node-sass](https://www.npmjs.com/package/node-sass) for CSS styles (with both Flexbox and CSS Grid)
+* [The Movie Database (TMDB)](https://developers.themoviedb.org/3/getting-started/introduction) API for the movie data
+
 ## Available Scripts
 
 In the project directory, you can run:
