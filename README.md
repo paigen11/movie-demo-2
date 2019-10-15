@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live Demo
+
+A live demo of this site is available [here](movie-demo-2.paigen11.now.sh).
+
 ## Project Details
 
 This is the second demo created for the conference talk: "Responsive Web Design with ReactJS." It demonstrates how to create a responsive ReactJS movie database website using pure CSS3 media queries.
