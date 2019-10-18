@@ -6,7 +6,7 @@ A live demo of this site is available [here](movie-demo-2.paigen11.now.sh).
 
 ## Project Details
 
-This is the second demo created for the conference talk: "Responsive Web Design with ReactJS." It demonstrates how to create a responsive ReactJS movie database website using pure CSS3 media queries.
+This is the second demo created for the conference talk: ["Responsive Web Design with ReactJS"](https://drive.google.com/open?id=1Nk91wj1h0Y8PjlKnicuw7LMDKqES9NUF). It demonstrates how to create a responsive ReactJS movie database website using pure CSS3 media queries.
 
 ## Technologies of Note Powering This App
 
